@@ -1,0 +1,30 @@
+.galleryCardsPaginator {
+    align-items: center;
+}
+
+.galleryFilter {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+.galleryFilterDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtersContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.filterButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.filterButton {
+    width: 150px;
+}
