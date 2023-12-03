@@ -35,11 +35,7 @@ const Filter = (props: FilterPropsInterface) => {
 
   return (
     <Accordion className={styles.galleryFilter}>
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
-        aria-controls="panel1a-content"
-        id="panel1a-header"
-      >
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>Filter</Typography>
       </AccordionSummary>
       <div style={{ zIndex: 1 }}>

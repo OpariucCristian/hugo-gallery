@@ -1,6 +1,6 @@
 //Simple api layer just to split functionalities, usually would generate this from an api generator
 
-import { GalleryResponseInterface } from "../pages/gallery/Gallery";
+import { GalleryResponseInterface } from "../models/GalleryModels";
 
 export class GalleryControllerApi {
   getAllCards(): Promise<GalleryResponseInterface[]> {

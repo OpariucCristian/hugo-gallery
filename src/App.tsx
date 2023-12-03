@@ -21,10 +21,10 @@ const App = () => {
     palette: {
       mode: toggleDarkMode ? "dark" : "light",
       primary: {
-        main: "#90caf9",
+        main: "#FFC801",
       },
       secondary: {
-        main: "#131052",
+        main: "#FFC801",
       },
     },
   });
@@ -32,22 +32,12 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {/* <Switch
-          className={styles.darkModeToggleButton}
-          checked={toggleDarkMode}
-          onChange={toggleDarkTheme}
-          icon={<Brightness4Icon sx={{ marginBottom: 1 }} />}
-          checkedIcon={<Brightness7Icon sx={{ marginBottom: 1 }} />}
-          size="medium"
-          edge="end"
-          disableRipple
-        /> */}
         <IconButton
           className={styles.darkModeToggleButton}
           sx={{
             position: "fixed",
             top: "1rem",
-            right: "10rem",
+            right: "17%",
           }}
           onClick={toggleDarkTheme}
           color="inherit"

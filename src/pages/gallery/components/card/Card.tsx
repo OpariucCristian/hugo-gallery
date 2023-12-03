@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { GalleryResponseInterface } from "../../Gallery";
+import { GalleryResponseInterface } from "../../../../models/GalleryModels";
 import styles from "./Card.module.scss";
 
 const Card = (props: GalleryResponseInterface) => {
@@ -63,7 +63,7 @@ const Card = (props: GalleryResponseInterface) => {
               {!hasImageLoaded && (
                 <Skeleton width={600} height={600} variant="rectangular" />
               )}
-              <Typography>{title}</Typography>
+              <p className={styles.cardModalTitle}>{title}</p>
             </Paper>
           </Box>
         </Fade>
