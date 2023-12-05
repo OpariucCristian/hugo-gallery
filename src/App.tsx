@@ -11,7 +11,7 @@ import styles from "./App.module.scss";
 const router = createBrowserRouter(routes);
 
 const App = () => {
-  const [toggleDarkMode, setToggleDarkMode] = useState(true);
+  const [toggleDarkMode, setToggleDarkMode] = useState<boolean>(true);
 
   const toggleDarkTheme = () => {
     setToggleDarkMode(!toggleDarkMode);
@@ -33,7 +33,6 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <IconButton
-          className={styles.darkModeToggleButton}
           sx={{
             position: "fixed",
             top: "1rem",
