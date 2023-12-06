@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@emotion/react";
+import { CssBaseline, IconButton, createTheme } from "@mui/material";
+import React, { useState } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
-function App() {
+import { routes } from "./routes";
+import styles from "./App.module.scss";
+
+const router = createBrowserRouter(routes);
+
+const App = () => {
+  const [toggleDarkMode, setToggleDarkMode] = useState<boolean>(true);
+
+  const toggleDarkTheme = () => {
+    setToggleDarkMode(!toggleDarkMode);
+  };
+
+  const theme = createTheme({
+    palette: {
+      mode: toggleDarkMode ? "dark" : "light",
+      primary: {
+        main: "#FFC801",
+      },
+      secondary: {
+        main: "#FFC801",
+      },
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <IconButton
+          sx={{
+            position: "fixed",
+            top: "1rem",
+            right: "17%",
+          }}
+          onClick={toggleDarkTheme}
+          color="inherit"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {theme.palette.mode === "dark" ? (
+            <Brightness7Icon />
+          ) : (
+            <Brightness4Icon />
+          )}
+        </IconButton>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;

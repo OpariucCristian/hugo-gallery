@@ -1,0 +1,44 @@
+.galleryContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.galleryContentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 65%;
+}
+
+.galleryCardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-content: center;
+    grid-auto-flow: row;
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+    width: 100%;
+    margin: 20px 0px 50px 0px;
+}
+
+.galleryActionsContainer {
+    margin-top: 0px;
+    align-self: flex-start;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+
+    & p {
+        margin-top: 22px;
+        margin-left: -7px;
+    }
+}
+
