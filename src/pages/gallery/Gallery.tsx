@@ -152,9 +152,7 @@ const Gallery = () => {
             </>
           ) : (
             <>
-              <Typography>
-                Sorry, no results were found. Try changing your filters!
-              </Typography>
+              <Typography>Sorry, no results were found.</Typography>
             </>
           )}
         </Box>
