@@ -139,13 +139,15 @@ const Gallery = () => {
                   />
                 ))}
               </Box>
-              {itemsPerPage && (
+              {itemsPerPage ? (
                 <Pagination
                   className={styles.galleryCardsPaginator}
                   count={Math.ceil(totalItems / itemsPerPage)}
                   page={page}
                   onChange={handleChangePage}
                 />
+              ) : (
+                <></>
               )}
             </>
           ) : (
